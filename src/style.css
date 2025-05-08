@@ -20,15 +20,27 @@ header{
 }
 form{
     text-align: center;
-    font-size: 1px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 20px;
 }
 .search-input{
     font-size: 16px;
-    padding: 2px;
+    padding: 15px;
     margin: auto 10px;
+    border: none;
     border-radius: 5px;
+    width: 55%;
+}
+.search-submit{
+    background-color: rgb(49, 117, 253);
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding: 15px 2px;
+    margin: auto -5px auto 5px;
+    border: none;
+    border-radius: 5px;
+    width: 20%;
 }
 footer{
     color:white;
