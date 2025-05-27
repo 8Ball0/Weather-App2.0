@@ -10,8 +10,8 @@ background: rgba(0, 0, 0, 0.8);
 color: rgb(255, 255, 255);
 margin: 70px auto;
 padding: 15px;
-width: 900px;
-height: 400px;
+width: 850px;
+height: 500px;
 border-radius: 10px;
 }
 header{
@@ -42,6 +42,51 @@ form{
     border-radius: 5px;
     width: 20%;
 }
+.left-side{
+    display: flex;
+    justify-content: space-between;
+
+}
+main{
+    padding: 30px;
+}
+.city-title{
+    padding: 0px;
+    margin: 0px;
+    font-size: 42px;
+    line-height: 48px;
+    
+}
+.city-details{
+    font-size: 16px;
+    line-height: 22px;    
+}
+.city-details strong{
+    color: rgb(0, 162, 255);
+}
+
+.current-weather{
+    display:flex
+}
+.current-weather-icon{
+    font-size: 45px;
+    margin-top:30px
+}
+.current-weather-number{
+    font-size: 100px;
+    margin-left:8px;
+    font-weight: bold;
+}
+.degrees{
+    font-size: 28px;
+    margin-left: 5px;
+    margin-top:10px
+}
 footer{
+    border-top: 1px solid rgb(161, 159, 159);
+    text-align: center;
     color:white;
+    margin-top: 150px;
+    padding: 20px
+  
 }
