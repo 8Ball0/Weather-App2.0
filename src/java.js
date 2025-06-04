@@ -1,4 +1,17 @@
 
+function getDate(date){
+    let hours = date.getHours()
+    let minutes = date.getMinutes()
+    let days = ["Sunday", "Monday", "Tuesday ", " Wednesday", "Thursday ", " Friday ", "Satureday"];
+    let day = days[date.getDay()]
+
+    if (minutes < 10){
+        minutes = `0${minutes}`;
+    }
+
+    return `${day} ${hours} : ${minutes}`
+}
+
 
 function updateWeather(response){
     let tempOriginal = document.querySelector("#current-weather-number-id")
@@ -8,13 +21,16 @@ function updateWeather(response){
     let currentConditions = response.data.condition.description;
     let humidity = document.querySelector("#humidity");
     let winds = document.querySelector("#winds")
+    let time = document.querySelector("#time")
+    let date = new Date(response.data.time * 1000)
+
 
     tempOriginal.innerHTML = temperature;
     titleOriginal.innerHTML = response.data.city
     conditions.innerHTML = currentConditions;
     humidity.innerHTML = response.data.temperature.humidity;
     winds.innerHTML = response.data.wind.speed
-  
+    time.innerHTML = getDate(date)
 }
 
 function lookupCityInfo(city){
