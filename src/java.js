@@ -1,7 +1,12 @@
 
 
 function updateWeather(response){
-    console.log(response.data.temperature.current);
+    let tempOriginal = document.querySelector("#current-weather-number-id")
+    let temperature = Math.round(response.data.temperature.current);
+    let titleOriginal = document.querySelector("#city-title");
+    tempOriginal.innerHTML = temperature;
+    titleOriginal.innerHTML = response.data.city
+    console.log(temperature); 
 }
 
 function lookupCityInfo(city){
@@ -14,7 +19,6 @@ function changeCity(event){
     event.preventDefault();
     let titleChange = document.querySelector("#search-form-id");
     let titleOriginal = document.querySelector("#city-title");
-    titleOriginal.innerHTML = titleChange.value;
     lookupCityInfo(titleChange.value);
 }
 
