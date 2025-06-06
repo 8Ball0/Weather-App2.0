@@ -23,6 +23,7 @@ function updateWeather(response){
     let winds = document.querySelector("#winds")
     let time = document.querySelector("#time")
     let date = new Date(response.data.time * 1000)
+    let icon = document.querySelector("#icon");
 
 
     tempOriginal.innerHTML = temperature;
@@ -31,6 +32,7 @@ function updateWeather(response){
     humidity.innerHTML = response.data.temperature.humidity;
     winds.innerHTML = response.data.wind.speed
     time.innerHTML = getDate(date)
+    icon.innerHTML = `<img src = "${response.data.condition.icon_url}"></img>`
 }
 
 function lookupCityInfo(city){
