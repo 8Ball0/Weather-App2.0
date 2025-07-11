@@ -10,8 +10,8 @@ background: rgba(0, 0, 0, 0.8);
 color: rgb(255, 255, 255);
 margin: 70px auto;
 padding: 15px 5px;
-width: 850px;
-height: 500px;
+max-width: 850px;
+
 border-radius: 10px;
 }
 header{
@@ -61,7 +61,7 @@ main{
     
 }
 .city-details{
-    font-size: 16px;
+    font-size: 20px;
     line-height: 22px;    
 }
 .city-details strong{
@@ -86,18 +86,22 @@ main{
     margin-top:10px
 }
 .forecast{
-
+display: flex;
+justify-content: space-around;
 }
 .forecast-day{
     text-align: center;
     color: rgba(255, 255, 255, 0.836);
-    font-size: 30px;
+    font-size: 25px;
     line: height 20px;
     margin-bottom:5px
 }
 .forecast-emoji{
-    font-size: 38px;
-    text-align: center;
+    width: 95px;
+    height: 95px;
+    display:block;
+    margin: 0 auto;
+    padding-bottom: 0;
 }
 .forecast-temperatures{
     text-align: center;
